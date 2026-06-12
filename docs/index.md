@@ -3,7 +3,7 @@
 ---
 
 > [!NOTE]
-> **Lecture Slides Available:** You can view the accompanying interactive lecture slides for Day 1.0 (Ephys, Behavior & Passive Electronics 101) [here](slides.html).
+> **Lecture Slides Available:** You can view the accompanying interactive lecture slides for Day 1.0 (Ephys, Behavior & Passive Electronics 101) [here](lectures/slides.html).
 
 ---
 
