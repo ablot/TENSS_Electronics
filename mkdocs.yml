@@ -1,0 +1,40 @@
+site_name: TENSS 2025 - Extracellular Electrophysiology
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: true
+      print_page_title: "Print Full Handout"
+
+nav:
+  - Home: index.md
+  - Part 1 - Fundamentals: 01_fundamentals.md
+  - Part 2 - Passive Filters: 02_passive_filters.md
+  - Part 3 - Voltage Followers: 03_voltage_followers.md
+  - Part 4 - Active Filters: 04_active_filters.md
+  - Part 5 - Differential Amplification: 05_differential_amplification.md
+  - Part 6 - Full Circuit: 06_full_circuit.md
+  - Bill of Materials: bom.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - def_list
+  - admonition
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/chart.js
+  - javascripts/interactive_plots.js

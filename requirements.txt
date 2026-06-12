@@ -1,0 +1,5 @@
+# Pins MkDocs to v1.x to avoid breaking changes introduced in MkDocs 2.0
+mkdocs>=1.6.0,<2.0.0
+mkdocs-material>=9.5.0,<10.0.0
+mkdocs-print-site-plugin>=2.8.0
+pymdown-extensions>=10.0.0
