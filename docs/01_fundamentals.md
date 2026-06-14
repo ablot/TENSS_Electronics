@@ -25,13 +25,13 @@ the input voltage it receives. Consider the circuit below.
 The current going through $R_{1}$, also passes through $R_{2}$. We'll
 call this current $I$. According to Ohm's law:
 
-$V_{in\ } = I\ {(R}_{1}\  + \ R_{2})$
+$$V_{in\ } = I\ {(R}_{1}\  + \ R_{2})$$
 
-$V_{out}\  = \ I\ R_{2}$
+$$V_{out}\  = \ I\ R_{2}$$
 
 Therefore:
 
-$V_{out}\  = \ \frac{R_{2}}{(R_{1} + R_{2})}V_{in}$
+$$V_{out}\  = \ \frac{R_{2}}{(R_{1} + R_{2})}V_{in}$$
 
 The ratio between the $V_{out}$ and $V_{in}$ depends on the values of
 the resistors $R_{1}$and $R_{2}$. Note that this ratio is always less
@@ -40,7 +40,7 @@ own power source, and as such, can only attenuate the voltage. In order
 to amplify voltages, we need active parts, as we will see in the
 following sections.
 
-**Exercise 1-1** - Build a voltage divider as shown in the above
+**Exercise 1-2** - Build a voltage divider as shown in the above
 circuit, where $V_{in}$is the voltage between the positive supply
 voltage and the ground (15v). Use $R_{1}\  = \ R_{2}\  \approx \ 1\ kOhm$, and
 measure $V_{out}$.
@@ -49,7 +49,7 @@ measure $V_{out}$.
 
 - Change $R_{2}$ to a resistor with a lower value, e.g. $300\ Ohm$. What is $V_{out\ }$now?
 
-**Exercise 1-2** - Next, we need to get comfortable with our
+**Exercise 1-3** - Next, we need to get comfortable with our
 oscilloscope because we are going to be using it a lot over the next
 couple days.
 
@@ -111,7 +111,7 @@ has gone well you should see something like this on your screen:
 
 ![](./media/image15.png){: style="width: 4.921875546806649in; height: 3.69538823272091in;" }
 
-**Exercise 1-3** - What happens if you put an electrode in the brain and
+**Exercise 1-5** - What happens if you put an electrode in the brain and
 measure the output? In this exercise, we will build a simple circuit to
 mimic this scenario. First we need to plug in our 10x probes to get
 accurate measurements. Plug one into each input channel of the scope and
