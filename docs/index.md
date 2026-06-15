@@ -1,5 +1,8 @@
 # TENSS 2026 - Electronics Practical
 
+## Picoscope software download link:
+
+https://www.picotech.com/downloads/_lightbox/picoscope-7-stable-for-windows
 
 ##  Component reference:
 
