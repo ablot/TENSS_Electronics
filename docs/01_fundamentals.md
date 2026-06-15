@@ -42,9 +42,9 @@ Next, we need to get comfortable with our oscilloscope because we are going to b
 
 Our scopes have 2 input channels. Either of the inputs can be sent through a threshold to capture the signals collected on both channels in the vicinity of a trigger event.
 
-**Exercise 1-2** - Let's use the oscilloscope to measure the voltage divider output. Connect an oscilloscope probe to **Channel 1** (orange port). Connect the probe tip to $V_{out}$ of your voltage divider (with $R_1 = R_2 \approx 1\text{ kOhm}$), and the probe ground clamp to your circuit ground.
+**Exercise 1-2** - Let's use the oscilloscope to measure the voltage divider output. Connect an oscilloscope probe to **Channel 1** (orange port). Connect the probe tip to $V_{out}$ of your voltage divider, and the probe ground clamp to your circuit ground.
 
-Hit **CONF** on channel one and use the arrow and OK buttons to select the following options:
+Hit **CONF** on channel 1 and use the arrow and OK buttons to select the following options:
 
 - Probe: 10x (make sure that the 10x switch is set on the probe itself)
 
@@ -52,11 +52,11 @@ Hit **CONF** on channel one and use the arrow and OK buttons to select the follo
 
 - FFT: Off
 
-Adjust your channel one's vertical settings to the following using its knobs:
+Adjust channel 1's vertical settings to the following using its knobs:
 
 - DIV: 2 V (this means 2 V per vertical graticule)
 
-- POS: 0V (this is the vertical offset voltage applied to the measured signal. On this oscilliscope the offset is also affected by changes of the DIV knob)
+- POS: 0V (this is the vertical offset voltage applied to the measured signal. On this oscilloscope the offset is also affected by changes of the DIV knob)
 
 Adjust the horizontal settings to:
 
@@ -80,7 +80,7 @@ Connect the ground of the oscilloscope (the tiny crocodile clamp) to the signal 
 
 - What happens to the noise? Why? What happens when you move the probe?
 
-## Pull-down resistor
+<!-- ## Pull-down resistor
 
 Now we want to build a simple circuit to measure the state of a button. We will build this 
 circuit in two steps to see how a floating node behaves in a real circuit:
@@ -116,7 +116,7 @@ circuit in two steps to see how a floating node behaves in a real circuit:
 
 This experiment demonstrates why inputs (such as amplifier channels or microcontroller pins) must never be left floating. When no active source is driving a wire, we need a way to tie it to a default reference. We achieve this using a **pull-down resistor** (a resistor connecting the signal line to the negative terminal) or a **pull-up resistor** (connecting it to the positive terminal), which keeps the node at a stable state while allowing active signals to easily override it.
 
----
+--- -->
 
 ## Generating signals with the oscilloscope
 
@@ -175,6 +175,8 @@ Make sure your scope is running by pressing the Run/Stop button. If all has gone
 Now that we can make measurements and generate signals with our scope, we want to measure the output from a simple electrode model. We consider the following circuit as a simplified model of the electrode and the measurement system.
 
 ![](./media/electrode_model_schematic.png){: style="width: 2.6770833333333335in; height: 1.823520341207349in;" }
+
+![](./media/electrode_model_neuron.png){: style="width: 2.6770833333333335in; height: 1.823520341207349in;" }
 
 We imagine that the function generator on the scope (voltage source in the image above) is a huge neuron. $R_{s}$ stands for the series resistance of the electrode. $R_{sh}$ is the shunt or parallel resistor and represents the effective resistance along all possible paths through which the current can flow to the ground through your recording system.
 

@@ -17,7 +17,7 @@ With your probes attached to the circuit, disconnect the lead from +5V to the ci
 
 ![](./media/led_symbol.png){: style="width: 0.3697922134733158in; height: 0.3254166666666667in;" }
 
-- LED
+LED
 
 - What happens to the LED?
 
@@ -117,35 +117,7 @@ input.
 
 Change the input frequency to 1000 Hz, does the phase lag change?
 
-**Exercise 2-4:** So far we have been recording sine waves. Square waves
-consist of a broad range of frequencies, with edges containing high
-frequencies. Produce a square wave with your scope's function generator
-and then use the scope to measure the signal before and after the
-filter.
-
-- What do you observe?
-
-- Turn on the FFT function on each of your scopes' inputs (CONF button).
-  What do you see? (Hint: if you don't see anything interesting, try
-  changing the bandwidth of your measurement using the horizontal
-  controls on your scope.)
-
-You should be aware that, when your input signal contains a broad range
-of frequencies, filtering can affect each frequency component
-differently. The most obvious change is that each frequency's amplitude
-is changed (this is generally the purpose of filtering, after all).
-However, the relative phases of the signal can also change. This will
-manifest as distortions in the time domain (peaking and oscillations).
-There are many different types of filters that are designed to minimize
-the impact on certain aspects of the signal, but they always come with
-tradeoffs. Be careful when interpreting filtered signals, you need to
-understand exactly what effect they have across frequencies before
-comparing raw and filtered signals, or the results of different filter
-types. The phase response of a filter captures its effect on the phase
-of various frequency components. For the first order RC filter you have
-$\text{phase shift}(f) = -\arctan(2\pi fRC)$
-
-**Exercise 2-5:** Assemble a **low pas**s filter with the following
+**Exercise 2-4:** Assemble a **low pas**s filter with the following
 values:
 
 $$R_{2} = 220\text{ k}\Omega, C_{2} = 560\text{ pF}$$
@@ -190,17 +162,7 @@ filter to fill out the following table:
 What happens to the amplitude and phase of the output as the input
 frequency varies?
 
-## Generate a frequency sweep with a PicoScope
-
-Our oscilloscope does not have the option to generate frequency sweeps
-(or "chirps"), to do this we can use a digital oscilloscope - the
-PicoScope[^4].
-
-- Install Pico scope software:
-
-- <u>[https://www.picotech.com/downloads</u>](https://www.picotech.com/downloads)
-
-- Install Picoscope 7 T&M
+## Generate a frequency sweep with the PicoScope
 
 Connect the USB cable, start the software, and check that the software
 detects the hardware ("Picoscope 2204A). Select it and click on the
@@ -209,10 +171,38 @@ frequency.
 
 ![](./media/picoscope_awg_connection.png){: style="width: 2.8586318897637795in; height: 4.828125546806649in;" }
 
-**Exercise 2-6:** Connect the output of the PicoScope "AWG" to your
+**Exercise 2-5:** Connect the output of the PicoScope "AWG" to your
 oscilloscope and look at the raw signal as well as at the Fourier
 transform (FFT). What is the FFT doing? Connect the input to your filter
 circuit and look at the output. Does it all make sense?
 
 
 [^4]: PicoScope could also be used for recording data, instead of the oscilloscope ... but they can be very fiddly (i.e. crash, bug, require to be restarted for things to work again) ... so do it at your own risk and keep the simpler oscilloscope at hand if you do.
+
+**Exercise 2-6:** So far we have been recording sine waves. Square waves
+consist of a broad range of frequencies, with edges containing high
+frequencies. Produce a square wave with your Picoscope's function generator
+and then use the benchtop scope to measure the signal before and after the
+filter.
+
+- What do you observe?
+
+- Turn on the FFT function on each of your scopes' inputs (CONF button).
+  What do you see? (Hint: if you don't see anything interesting, try
+  changing the bandwidth of your measurement using the horizontal
+  controls on your scope.)
+
+You should be aware that, when your input signal contains a broad range
+of frequencies, filtering can affect each frequency component
+differently. The most obvious change is that each frequency's amplitude
+is changed (this is generally the purpose of filtering, after all).
+However, the relative phases of the signal can also change. This will
+manifest as distortions in the time domain (peaking and oscillations).
+There are many different types of filters that are designed to minimize
+the impact on certain aspects of the signal, but they always come with
+tradeoffs. Be careful when interpreting filtered signals, you need to
+understand exactly what effect they have across frequencies before
+comparing raw and filtered signals, or the results of different filter
+types. The phase response of a filter captures its effect on the phase
+of various frequency components. For the first order RC filter you have
+$\text{phase shift}(f) = -\arctan(2\pi fRC)$
