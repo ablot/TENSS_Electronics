@@ -88,6 +88,10 @@ circuit in two steps to see how a floating node behaves in a real circuit:
 **Exercise 1-4**
 
 1. Place a push button on your breadboard.
+   
+    !!! warning "Warning"
+        The pins of the switch are shorted by pairs! Refer to the push button diagram on the [introduction page](index.md#switch-push-button) (or ask a TA) to make sure you do not accidentally bypass it.
+
 2. Connect one side to the $+5\,\text{V}$ supply.
 3. Connect the opposite side to your oscilloscope probe to measure $V_{\text{out}}$. Leave it completely disconnected from any resistor or ground.
 4. Set the scope to a sensitive vertical range (e.g., $100\,\text{mV/div}$ or $500\,\text{mV/div}$).
