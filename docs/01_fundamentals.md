@@ -5,7 +5,7 @@
 A voltage divider is an electrical circuit that outputs a fraction of
 the input voltage it receives. Consider the circuit below.
 
-![](./media/voltage_divider_schematic.png){: style="width: 2.418474409448819in; height: 2.563583770778653in;" }
+![](./media/voltage_divider_schematic.png){: style="width: 2.418474409448819in; height: 2.563583770778653in; display: block; margin: 0 auto;" }
 
 The current going through $R_{1}$, also passes through $R_{2}$. We'll
 call this current $I$. According to Ohm's law:
@@ -27,7 +27,7 @@ following sections.
 
 **Exercise 1-1** - Build a voltage divider as shown in the above
 circuit, where $V_{in}$ is the voltage between the positive supply
-voltage and the ground (15v). Use $R_{1}\  = \ R_{2}\  \approx \ 1\ kOhm$, and
+voltage (set it to 5V) and the ground. Use $R_{1}\  = \ R_{2}\  \approx \ 1\ kOhm$, and
 measure $V_{out}$ using your multimeter.
 
 - What is $V_{out}$?
@@ -56,7 +56,7 @@ Adjust your channel one's vertical settings to the following using its knobs:
 
 - DIV: 2 V (this means 2 V per vertical graticule)
 
-- POS: 0V (this is the vertical offset voltage applied to the measured signal)
+- POS: 0V (this is the vertical offset voltage applied to the measured signal. On this oscilliscope the offset is also affected by changes of the DIV knob)
 
 Adjust the horizontal settings to:
 
