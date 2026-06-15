@@ -7,11 +7,7 @@ This repository contains the learning resources, practical guides, and lecture s
 ## Repository Structure
 
 *   `docs/` - Contains the markdown documentation files for the student tutorials.
-    *   `docs/lectures/slides.html` - Standalone interactive HTML slide deck merging module introduction with passive electronics 101.
     *   `docs/media/` - Shared folder containing all illustrations and diagrams.
-*   `lectures/` - Contains presentation slides.
-    *   `lectures/slides.tex` - LaTeX Beamer source file for the introductory presentation.
-    *   `lectures/slides.pdf` - Compiled PDF slide deck ready for presenting.
 *   `mkdocs.yml` - Configuration file for generating the documentation website.
 *   `requirements.txt` - Python dependencies for serving/building the website.
 
