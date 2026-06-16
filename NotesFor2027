@@ -2,4 +2,16 @@
 
 - Call the voltage of the battery Va-Vb and always use that.
 - Don't send someone to the board?
+- Remove electrode model at the end
+
+# Practicals Part 1:
+
+- remove electrode model. Just measure a sine wave with big shunt and start with big shunt directly
+
+
+
+# Practicals in general:
+
+- Use digilent "electroni explorer" boards
+- Better way to connect signal generator to breadboard
 
