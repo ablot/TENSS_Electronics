@@ -3,12 +3,17 @@
 - Call the voltage of the battery Va-Vb and always use that.
 - Don't send someone to the board?
 - Remove electrode model at the end
+- put back parallel / series
 
 # Practicals Part 1:
 
 - remove electrode model. Just measure a sine wave with big shunt and start with big shunt directly
 
+# Lecture 2 (Capacitors):
 
+- remove the last slide (why?)
+- add impedence
+- add relation between plate size and capacitance
 
 # Practicals in general:
 
