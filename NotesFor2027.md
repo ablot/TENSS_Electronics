@@ -40,3 +40,4 @@
 - Better way to connect signal generator to breadboard
 - Burn the oscilloscope
 - remove the inverting amp for the filter, use non-inverting
+- In every lecture and practicals, add Va-Vb or ground.
