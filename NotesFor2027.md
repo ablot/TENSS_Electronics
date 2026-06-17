@@ -27,9 +27,16 @@
 - show the DC + oscillation for the filter example only second. First put a square wave
 - 
 
+# Lecture 4 (opamp)
+
+- consider doing just gain first. Then impedance transform?
+- Do not speak about electrode
+- Do the "time unroll" with explicit number and steps, on the board before the simulation
+
 # Practicals in general:
 
 - Use digilent "electroni explorer" boards
 - We lost one of the breadboard with power, it's crap now
 - Better way to connect signal generator to breadboard
+- Burn the oscilloscope
 
