@@ -39,4 +39,4 @@
 - We lost one of the breadboard with power, it's crap now
 - Better way to connect signal generator to breadboard
 - Burn the oscilloscope
-
+- remove the inverting amp for the filter, use non-inverting
