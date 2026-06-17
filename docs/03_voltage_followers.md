@@ -16,17 +16,8 @@ bandwidth. An op amp's bandwidth is the widest (it is capable of
 following the fastest signals) when its gain is lowest (when it is used
 as a follower).
 
-**Exercise 3-1** - Build a voltage divider, connected to your sine wave
-source with $R_{s}\  = \ 1\ MOhm$ and $R_{sh}\  = \ 22\ kOhm$ (see
-circuit below).
-
-![](./media/voltage_divider_large_rs.png){: style="width: 3.5833333333333335in; height: 2.875in; display: block; margin: 0 auto;" }
-
-- What happens to Vout when you disconnect $R_{sh}$?
-
-Now add a voltage buffer between $R_{s}$ and $R_{sh}$ (see circuit
-below). Use $Rf\  = \ 1\ kOhm$for the feedback resistor. To do this,
-you will need to use an op-amp. We will use LM358AN/LM358AP (you can
+To do the following exercises,
+you will need to use op-amp chips. We will use LM358AN/LM358AP (you can
 google the datasheet). It's not the best op-amp, it's not the worst.
 But it's certainly one of the cheapest. It's also really forgiving \--
 it allows large voltage rails and is stable with poorly regulated power
@@ -45,12 +36,21 @@ the proper range of dc supply voltage and polarity</u>**. <small>(It's
 max = 32 V)</small>.
 
 The following diagram is an overhead view of the LM358 with its pins
-labeled. Use this as a map when making connections on your breadboard.
+labeled. Use this as a map when making connections on your breadboard. Note the orientation of the notch a the top of the diagram.
 
 ![](./media/lm358_pinout.png){: style="width: 4in; height: 4in; display: block; margin: 0 auto;" }
 
-Now, go forth and place a voltage follower between the $1\ MOhm$
-resistor and the $22\ kOhm$ resistor on the breadboard:
+**Exercise 3-1** - Build a voltage divider, connected to your sine wave
+source with $R_{s}\  = \ 1\ MOhm$ and $R_{sh}\  = \ 22\ kOhm$ (see
+circuit below).
+
+![](./media/voltage_divider_large_rs.png){: style="width: 3.5833333333333335in; height: 2.875in; display: block; margin: 0 auto;" }
+
+- What happens to Vout when you disconnect $R_{sh}$?
+
+Now add a voltage buffer between the $1\ MOhm$ $R_{s}$ and the $22\ kOhm$ $R_{sh}$ (see circuit
+below). Use $Rf\  = \ 1\ kOhm$ for the feedback resistor. 
+
 
 ![](./media/voltage_follower_breadboard.png){: style="width: 5.265587270341207in; height: 2.9310061242344707in; display: block; margin: 0 auto;" }
 
