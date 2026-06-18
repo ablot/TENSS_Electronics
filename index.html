@@ -1,0 +1,1211 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="01_fundamentals/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>TENSS 2025 - Extracellular Electrophysiology</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/print-site.css">
+    
+      <link rel="stylesheet" href="css/print-site-material.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tenss-2026-electronics-practical" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="TENSS 2025 - Extracellular Electrophysiology" class="md-header__button md-logo" aria-label="TENSS 2025 - Extracellular Electrophysiology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TENSS 2025 - Extracellular Electrophysiology
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="TENSS 2025 - Extracellular Electrophysiology" class="md-nav__button md-logo" aria-label="TENSS 2025 - Extracellular Electrophysiology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TENSS 2025 - Extracellular Electrophysiology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#picoscope-software-download-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Picoscope software download link:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Component reference:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component reference:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resistor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resistor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacitor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-push-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch (Push Button)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#op-amp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Op-amp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breadboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breadboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimeter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimeter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oscilloscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oscilloscope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oscilloscope-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oscilloscope Probe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microcontroller-development-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microcontroller Development Board
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passive-component-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passive component values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-in-doubt-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When in doubt, measure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datasheets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_passive_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Passive Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_voltage_followers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Voltage Followers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_active_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Active Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_differential_amplification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - Differential Amplification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_full_circuit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6 - Full Circuit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bill of Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print Full Handout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#picoscope-software-download-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Picoscope software download link:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Component reference:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component reference:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resistor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resistor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacitor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch-push-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch (Push Button)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#op-amp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Op-amp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breadboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breadboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimeter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimeter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oscilloscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oscilloscope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oscilloscope-probe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oscilloscope Probe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microcontroller-development-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microcontroller Development Board
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passive-component-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passive component values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-in-doubt-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When in doubt, measure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datasheets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tenss-2026-electronics-practical">TENSS 2026 - Electronics Practical</h1>
+<h2 id="picoscope-software-download-link">Picoscope software download link:</h2>
+<p>https://www.picotech.com/downloads/_lightbox/picoscope-7-stable-for-windows</p>
+<h2 id="component-reference">Component reference:</h2>
+<h3 id="resistor">Resistor</h3>
+<p>A passive<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> circuit element that resists the flow of
+current. You can think of them like constrictions in a water pipe. They
+are non-polarized (so it doesn't matter in which direction you put them)
+and look like this:</p>
+<p><img alt="" src="media/resistor_photo.png" style="width: 1.6822714348206473in; height: 1.6822714348206473in; display: block; margin: 0 auto" /></p>
+<p>The color code indicates the resistance (the amount of constriction in
+the pipe). However, it is often easier just to measure them using an
+ohmmeter instead of memorizing the color code :).</p>
+<h3 id="capacitor">Capacitor</h3>
+<p>A passive<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> circuit element that resists changes in
+voltage and passes AC currents. You can think of them like diaphragms in
+a water pipe. Some are non-polarized and others are. If you
+reverse-polarize the latter, the <a href="https://en.wikipedia.org/wiki/Magic_smoke"><u>magic blue smoke</u></a> that's
+inside them and allows them to work will escape! Don't let the magic
+blue smoke out because it's very hard to put it back inside.</p>
+<figure align="center">
+  <img src="media/capacitors_polarized_ceramic.png" style="width: 3.2in;">
+  <figcaption><b>Capacitors.</b> (left) A non-polarized 0.22 uF ceramic capacitor and (right) a polarized 1000 uF electrolytic capacitor with its negative lead clearly marked. The voltage rating indicates the max voltage the capacitor should be used with.</figcaption>
+</figure>
+
+<h3 id="switch-push-button">Switch (Push Button)</h3>
+<p>A simple mechanical device that can connect or disconnect an electrical path. The switches in your kit are <strong>momentary tactile push buttons</strong>, meaning they only make contact while you are actively pressing them down.</p>
+<figure align="center">
+  <img src="media/switch.jpg" style="width: 3.2in;">
+  <figcaption><b>Tactile Push Buttons.</b> (left) Underside view overlaid with internal schematic: the green line and blue line show the pairs of pins that are permanently connected together. The white switch symbol shows the bridge created when the button is pressed. (right) Top view.</figcaption>
+</figure>
+
+<p>Because the pairs of pins (connected by the green and blue lines) are permanently shorted even when the button is not pressed, it is easy to accidentally bypass the switch. To use it correctly, either place the switch across the middle ravine of the breadboard or place the pins of one of the pairs in the same horizontal row on the breadboard.</p>
+<h3 id="op-amp">Op-amp</h3>
+<p>An op-amp is short for operational amplifier. It is a
+ubiquitous active<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, analog integrated circuit. It looks like this:</p>
+<figure align="center">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+    <img src="media/opamp_741_dip8.png" style="width: 2.0in;">
+    <img src="media/opamp_741_internal_schematic.png" style="width: 3.8in;">
+  </div>
+  <figcaption><b>The 741 is a classic op-amp.</b></figcaption>
+</figure>
+
+<p>An op-amp is a voltage amplifier and will produce an output voltage that
+is equal to the difference between the positive (non-inverting) and
+negative (inverting) input voltages times a gain. The gain is fixed and
+is absolutely huge (on the order of 1e6). Their output is limited by
+their power supply rails (V+ and V-; also labeled VCC and VSS,
+respectively). If you want the output of an op-amp to be an amplified
+version of the input, rather than just bouncing back and forth between
+the supply rails, you must tame them using negative feedback to reduce
+the effective voltage gain. We will do that for all the circuits we use
+them in.</p>
+<h3 id="breadboard">Breadboard</h3>
+<p>A breadboard is a convenient way of prototyping
+circuits. It has the following connection diagram.</p>
+<figure align="center">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
+    <img src="media/breadboard_plastic_view.png" style="width: 5.5in;">
+    <img src="media/breadboard_internal_view.png" style="width: 6.4in;">
+  </div>
+  <figcaption><b>A small bread board (left) with the top plastic removed (right).</b> The dark lines are metal strips that the pins of components are pressed into.</figcaption>
+</figure>
+
+<h3 id="multimeter">Multimeter</h3>
+<p>A multimeter is a tool for measuring static (things
+that don't change quickly over time) characteristics of circuits. They
+can measure resistance, capacitance, DC current, DC voltage, and the
+amplitude of AC signals. They cannot measure a time series. Multimeters
+are "floating" compared to earth. This means it's safe to put their
+probes at any point in the circuit <em>when measuring voltage</em> because they
+have no preference for what ground is. Current measurements use a
+low-value shut resistor in series with the probe that can, e.g. short
+power supplies.</p>
+<figure align="center">
+  <img src="media/multimeter_photo.png" style="width: 3.2in;">
+  <figcaption><b>A multimeter.</b> At no point in the course should your multimeter read "600V AC". If your multimeter reads this, and you're alive, leave the area.</figcaption>
+</figure>
+
+<h3 id="oscilloscope">Oscilloscope</h3>
+<p>A piece of test equipment that allows observation of
+time varying voltages. It can plot voltage as a function of time and
+detect voltage events using threshold crossing (this is called
+"triggering"). Some have other functions built in as well, such as the
+ability to generate voltage waveforms. We will be using one of these for
+this course.</p>
+<p>NOTE: Almost all oscilloscopes, including ours, are mains earth
+referenced. This means that the outer shells of the BNC connections in
+the front of them are connected to earth ground (third prong on wall
+plug). USB on a computer that is powered through mains-power cord is
+also mains earth referenced. Therefore it's quite easy to create
+unintended circuits with the ground lead on scope probes. Be careful
+where you put it.</p>
+<figure align="center">
+  <img src="media/oscilloscope_benchtop.png" style="width: 6.4in;">
+  <figcaption><b>A benchtop scope with integrated display</b></figcaption>
+</figure>
+
+<figure align="center">
+  <img src="media/oscilloscope_pico.png" style="width: 4.5in;">
+  <figcaption><b>A Pico USB scope that pairs with computer software</b></figcaption>
+</figure>
+
+<h3 id="oscilloscope-probe">Oscilloscope Probe</h3>
+<p>A special cable that is connected to the input
+of an oscilloscope and is used to probe voltages on the circuit under
+test. Scope probes are designed to reduce the effect of the
+oscilloscope's measurement on the circuit operation (reduce its
+"loading"). They do this by attenuating the voltage before it is
+measured and compensating for the parasitic capacitance of the cable
+itself (how do you think they attenuate the voltage...?). The degree of
+attenuation is indicated by the probe (e.g. 1x, 10x, 100x for divide by
+1, 10, and 100, respectively) and must be accounted for in the scope to
+get accurate voltage amplitudes. Some probes have a selectable
+attenuation. We want to keep our probes in 10x.</p>
+<p><strong>NOTE:</strong> You must tell your scope software that you are using a 10x
+attenuating probe so that it can multiply its captured values by 10.</p>
+<figure align="center">
+  <img src="media/oscilloscope_probe_10x.png" style="width: 5.8in;">
+  <figcaption><b>10x Scope probe</b></figcaption>
+</figure>
+
+<h3 id="microcontroller-development-board">Microcontroller Development Board</h3>
+<p>A microcontroller is a
+single-chip computer. It has a CPU, RAM, and peripheral interfaces. They
+typically don't use an operating system and therefore can run simple
+programs with a high degree of regularity (there are no 'hiccups' while
+the computer is 'thinking'). Therefore they are good for acquiring data
+using analog-to-digital converters or generating signals using a
+digital-to-analog converter. We will be using either Arduino USB,
+Teensy, or Pico development boards during the course. These are all
+small microcontroller boards that provide easy access to the
+microcontroller's pins and allow you to load programs using USB. The
+programs are written in C++ and uploaded using a device-specific tool.</p>
+<figure align="center">
+  <img src="media/teensy_pinout.png" style="width: 4.0in;">
+  <figcaption><b>Teensy 3.2 Pinout.</b> Potentially relevant pins for the projects: practical are A14/DAC, Vin, and GND. You will upload your programs over the USB connection and they will run on the microcontroller (black chip in the center of the board).</figcaption>
+</figure>
+
+<p><strong>Power Supply:</strong> Benchtop power supplies are designed to prove an
+adjustable, low-output impedance voltage source to power electronics
+under test. They can be isolated from the mains ground or non-isolated.
+Bipolar (positive and negative voltage) or unipolar (only one voltage).
+Supply hundreds of volts, hundreds of amps, or combinations of all of
+these. They can be linear (use passive elements and a feed-back
+regulated MOSFET) or switch-mode (using a DC/DC converter inside).</p>
+<p>We have some simple, linear, isolated supplies. They have two dials. One
+adjusts the voltage, the other adjusts the current limit. Keep the
+current limit in the center. They are touchy. It's best to set the
+voltage and test with a multimeter, before plugging it into a circuit.
+We'll only really need these at the end when we record from cockroach
+legs.</p>
+<figure align="center">
+  <img src="media/power_supply_benchtop.png" style="width: 4.7in;">
+  <figcaption><b>A power supply.</b> This stock photo of one is acting strange: it's sourcing 3A at 30V (90W of power), with nothing connected between its output terminals. Where is that current going??</figcaption>
+</figure>
+
+<p>In addition to the benchtop supplies, we have homemade switching
+regulators that provide fixed output voltage (+/-15V) and are useful for
+breadboarding.</p>
+<figure align="center">
+  <img src="media/power_supply_switching_module.png" style="width: 4.2in;">
+  <figcaption><b>A simple switching supply was made for the course.</b> This device has fixed +/-15V supplies and can be easily plugged into a breadboard. It's noisy: the outputs are not a pure DC voltage but have all kinds of little wiggles embedded on top of these voltages.</figcaption>
+</figure>
+
+<h2 id="hints">Hints</h2>
+<h3 id="passive-component-values">Passive component values</h3>
+<p>You don't need to use the exact values of resistors and capacitors
+ presented in each circuit. If you can't find the exact resistor values
+ stated in the design, then find something close. You have the
+ knowledge to calculate the divide ratios, RC constants, etc. It's
+ probably wise to keep things within 10-20% of the values stated here,
+ but as long as you write down the component values you use, and the
+ polarity of capacitors and diodes, you will be fine.</p>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>
+<p>Take pictures of your breadboard and write notes as you go.</p>
+</li>
+<li>
+<p>The oscilloscope does not record long histories of the waveforms it
+  captures. In order to capture a waveform and pause acquisition you can
+  set your run mode to "single" to get a single trigger and waveform.
+  You can use the "S PIC" and "S WAV" to save images and data of the
+  captured waveform, respectively.</p>
+</li>
+<li>
+<p>Keeping a Google doc open to write down answers and to dump
+  screenshots, phone pictures of the scope, etc into may be wise</p>
+</li>
+</ul>
+<h3 id="when-in-doubt-measure">When in doubt, measure</h3>
+<ul>
+<li>
+<p>If you forget the value of a resistor that is lying around your bench,
+  simply put your multimeter into resistance mode and measure it.</p>
+</li>
+<li>
+<p>If you are unsure if you have the correct power supply voltage between
+  two pins on an active component, put your multimeter in voltage mode
+  and measure the voltage in the position the pin will go before
+  installing it</p>
+</li>
+<li>
+<p>If you are unsure that you are generating a signal, put it into your
+  scope to verify</p>
+</li>
+<li>
+<p>Etc.</p>
+</li>
+</ul>
+<h3 id="datasheets">Datasheets</h3>
+<p>In the world of electronics, the datasheet is the source of ultimate
+ truth. Every component you use will have a datasheet somewhere. This
+ is especially important for the active components used in these
+ exercises: the op-amps and instrumentation amps. If you have a doubt
+ about a component, the datasheet has the answer. They are dry and can
+ take expertise to understand. Your TAs will be happy to help you
+ interpret their content.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Passive means it does not require an external power source to work&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>In case you forgot, passive means it does not require an external power source to work&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Active means it does require an external power source to work&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+        <script src="javascripts/interactive_plots.js"></script>
+      
+    
+  </body>
+</html>

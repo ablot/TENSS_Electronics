@@ -1,0 +1,734 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../02_passive_filters/">
+      
+      
+        <link rel="next" href="../04_active_filters/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Part 3 - Voltage Followers - TENSS 2025 - Extracellular Electrophysiology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-3-voltage-followers-and-input-impedance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TENSS 2025 - Extracellular Electrophysiology" class="md-header__button md-logo" aria-label="TENSS 2025 - Extracellular Electrophysiology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TENSS 2025 - Extracellular Electrophysiology
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Part 3 - Voltage Followers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TENSS 2025 - Extracellular Electrophysiology" class="md-nav__button md-logo" aria-label="TENSS 2025 - Extracellular Electrophysiology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TENSS 2025 - Extracellular Electrophysiology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_passive_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Passive Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Voltage Followers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Voltage Followers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 3-2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_active_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Active Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_differential_amplification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - Differential Amplification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_full_circuit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6 - Full Circuit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bill of Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print Full Handout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 3-2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="part-3-voltage-followers-and-input-impedance">Part 3 - Voltage followers and input impedance</h1>
+<p>A common way to produce a large input impedance in electronics is using
+the following circuit:</p>
+<p><img alt="" src="../media/voltage_follower_basic.png" style="width: 1.8697922134733158in; height: 1.557001312335958in; display: block; margin: 0 auto;" /></p>
+<p>This circuit is called a voltage follower or voltage buffer. It is an
+op-amp with its output connected to its negative input. In this circuit,
+<span class="arithmatex">\(V_{out\ } = V_{in}\)</span>. As the input pins of the opamp do not draw
+current, you have a way of monitoring the input voltage without
+affecting it. In practice, however, when you have very fast changes of
+<span class="arithmatex">\(V_{in}\)</span>, <span class="arithmatex">\(V_{out}\)</span> might not be able to follow immediately (because of
+the capacitances in the circuit). This characteristic of an opamp is its
+bandwidth. An op amp's bandwidth is the widest (it is capable of
+following the fastest signals) when its gain is lowest (when it is used
+as a follower).</p>
+<p><strong>Exercise 3-1</strong> - Build a voltage divider, connected to your sine wave
+source with <span class="arithmatex">\(R_{s}\  = \ 1\ MOhm\)</span> and <span class="arithmatex">\(R_{sh}\  = \ 22\ kOhm\)</span> (see
+circuit below).</p>
+<p><img alt="" src="../media/voltage_divider.png" style="width: 3.5833333333333335in; height: 2.875in; display: block; margin: 0 auto;" /></p>
+<ul>
+<li>What happens to Vout when you disconnect <span class="arithmatex">\(R_{sh}\)</span>?</li>
+</ul>
+<p>Next, you will add a voltage buffer between <span class="arithmatex">\(R_{s}\)</span> and <span class="arithmatex">\(R_{sh}\)</span> (see circuit
+below). To do this,
+you will need to use an op-amp. We will use LM358AN/LM358AP (you can
+google the datasheet). It's not the best op-amp, it's not the worst.
+But it's certainly one of the cheapest. It's also really forgiving --
+it allows large voltage rails and is stable with poorly regulated power
+supplies.</p>
+<ul>
+<li>If you were using a more finicky op-amp that required really stable
+  voltage rails, how might you do that? (Hint: which passive circuit
+  element acts like a little battery that resists changes in voltage?)</li>
+</ul>
+<p>To generate the positive and negative power supply voltage for the
+op-amp, you will use two variable DC power supplies to power your op-amp
+(or one dual supply). </p>
+<p><strong><u>Make sure you look at the op-amp datasheet for
+the proper range of dc supply voltage and polarity</u></strong>. <small>(It's
+max = 32 V)</small>.</p>
+<p>The following diagram is an overhead view of the LM358 with its pins
+labeled. Use this as a map when making connections on your breadboard. Note the orientation of the notch at the top of the diagram with respect to the pin positions.</p>
+<p><img alt="" src="../media/lm358_pinout.png" style="width: 4in; height: 4in; display: block; margin: 0 auto;" /></p>
+<p>Now, go forth and place a voltage follower between the <span class="arithmatex">\(1\ MOhm\)</span> <span class="arithmatex">\(R_{s}\)</span>
+resistor and the <span class="arithmatex">\(22\ kOhm\)</span> <span class="arithmatex">\(R_{sh}\)</span> resistor on the breadboard:</p>
+<p><img alt="" src="../media/voltage_follower_breadboard.png" style="width: 5.265587270341207in; height: 2.9310061242344707in; display: block; margin: 0 auto;" /></p>
+<ul>
+<li>
+<p>Now, what happens to Vout when you disconnect <span class="arithmatex">\(R_{sh}\)</span>? And when you
+  put a low resistance (\~<span class="arithmatex">\(1\ kOhm\)</span>) instead?</p>
+</li>
+<li>
+<p>Is this circuit amplifying the signal?</p>
+</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>
+<p><strong>Bonus:</strong> The op-amp's inputs have very high input impedance. In the
+  above circuit, calculate the peak current flowing through the
+  <span class="arithmatex">\(22\ kOhm\)</span> resistor. Where is this current coming from? What voltage
+  would be required to generate this current without the op-amp? Would
+  this be possible using passive elements?</p>
+</li>
+<li>
+<p><strong>Bonus 2:</strong> Would anything change if we use a <span class="arithmatex">\(Rf\  = \ 1\ kOhm\)</span> as a feedback resistor in the feedback connection of the voltage follower?</p>
+</li>
+</ul>
+<h2 id="exercise-3-2"><strong>Exercise 3-2</strong></h2>
+<p>Move the <span class="arithmatex">\(22\ kOhm\)</span> resistor to the input side of the op-amp. </p>
+<p><img alt="" src="../media/opamp_input_divider.png" style="width: 4.526919291338583in; height: 2.2927602799650044in; display: block; margin: 0 auto;" /></p>
+<ul>
+<li>What is the attenuation imposed by the resistor divider?</li>
+</ul>
+<p>Remember that the gain of a non-inverting feedback network is given by <span class="arithmatex">\(k\  = 1 + \ \frac{R_{f}}{R_{g}}\)</span> . Get a couple of resistors with values between <span class="arithmatex">\(1\ kOhm\)</span> and <span class="arithmatex">\(100\ kOhm\)</span> that allow you to approximately (within 10%) undo the attenuation that is imposed on the input signal by the <span class="arithmatex">\(\frac{1\ MOhm}{22\ kOhm}\)</span> resistor divider to recover your input waveform.</p>
+<p><img alt="" src="../media/non_inverting_amplifier.png" style="width: 5.822916666666667in; height: 3.6875in; display: block; margin: 0 auto;" /></p>
+<ul>
+<li>What values did you choose for <span class="arithmatex">\(R_{f}\)</span> and <span class="arithmatex">\(R_{g}\)</span>? What is the
+  calculated gain?</li>
+</ul>
+<!-- -->
+
+<ul>
+<li>Bonus: Why is trying to <strong>exactly</strong> undo the attenuation a fool's errand
+  (Hint: think about whether or not your resistors have <em>exactly</em> the resistance they claim to have)</li>
+</ul>
+<h2 id="_1"></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+        <script src="../javascripts/interactive_plots.js"></script>
+      
+    
+  </body>
+</html>

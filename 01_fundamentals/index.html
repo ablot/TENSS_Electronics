@@ -1,0 +1,903 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../02_passive_filters/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Part 1 - Fundamentals - TENSS 2025 - Extracellular Electrophysiology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-1-resistors-capacitors-and-recording-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TENSS 2025 - Extracellular Electrophysiology" class="md-header__button md-logo" aria-label="TENSS 2025 - Extracellular Electrophysiology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TENSS 2025 - Extracellular Electrophysiology
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Part 1 - Fundamentals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TENSS 2025 - Extracellular Electrophysiology" class="md-nav__button md-logo" aria-label="TENSS 2025 - Extracellular Electrophysiology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TENSS 2025 - Extracellular Electrophysiology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#voltage-divider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voltage divider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-oscilloscope-to-measure-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the oscilloscope to measure signals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floating-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Floating Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-signals-with-the-oscilloscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating signals with the oscilloscope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electrode-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrode Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_passive_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Passive Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_voltage_followers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Voltage Followers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_active_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Active Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_differential_amplification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - Differential Amplification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_full_circuit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6 - Full Circuit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bill of Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print Full Handout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#voltage-divider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voltage divider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-oscilloscope-to-measure-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the oscilloscope to measure signals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floating-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Floating Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-signals-with-the-oscilloscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating signals with the oscilloscope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electrode-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrode Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="part-1-resistors-capacitors-and-recording-fundamentals">Part 1 - Resistors, capacitors, and recording fundamentals</h1>
+<h2 id="voltage-divider">Voltage divider</h2>
+<p>A voltage divider is an electrical circuit that outputs a fraction of
+the input voltage it receives. Consider the circuit below.</p>
+<p><img alt="" src="../media/voltage_divider_schematic.png" style="width: 2.418474409448819in; height: 2.563583770778653in; display: block; margin: 0 auto;" /></p>
+<p>The current going through <span class="arithmatex">\(R_{1}\)</span>, also passes through <span class="arithmatex">\(R_{2}\)</span>. We'll
+call this current <span class="arithmatex">\(I\)</span>. According to Ohm's law:</p>
+<div class="arithmatex">\[V_{in\ } = I\ {(R}_{1}\  + \ R_{2})\]</div>
+<div class="arithmatex">\[V_{out}\  = \ I\ R_{2}\]</div>
+<p>Therefore:</p>
+<div class="arithmatex">\[V_{out}\  = \ \frac{R_{2}}{(R_{1} + R_{2})}V_{in}\]</div>
+<p>The ratio between the <span class="arithmatex">\(V_{out}\)</span> and <span class="arithmatex">\(V_{in}\)</span> depends on the values of
+the resistors <span class="arithmatex">\(R_{1}\)</span>and <span class="arithmatex">\(R_{2}\)</span>. Note that this ratio is always less
+than one. Voltage dividers are passive circuits, they don't have their
+own power source, and as such, can only attenuate the voltage. In order
+to amplify voltages, we need active parts, as we will see in the
+following sections.</p>
+<p><strong>Exercise 1-1</strong> - Build a voltage divider as shown in the above
+circuit, where <span class="arithmatex">\(V_{in}\)</span> is the voltage between the positive supply
+voltage (set it to 5V) and the ground. Use <span class="arithmatex">\(R_{1}\  = \ R_{2}\  \approx \ 1\ kOhm\)</span>, and
+measure <span class="arithmatex">\(V_{out}\)</span> using your multimeter.</p>
+<ul>
+<li>
+<p>What is <span class="arithmatex">\(V_{out}\)</span>?</p>
+</li>
+<li>
+<p>Change <span class="arithmatex">\(R_{2}\)</span> to a resistor with a lower value, e.g. <span class="arithmatex">\(300\ Ohm\)</span>. What is <span class="arithmatex">\(V_{out\ }\)</span>now?</p>
+</li>
+</ul>
+<h2 id="using-the-oscilloscope-to-measure-signals">Using the oscilloscope to measure signals</h2>
+<p>Next, we need to get comfortable with our oscilloscope because we are going to be using it a lot over the next couple days.</p>
+<p><img alt="" src="../media/oscilloscope_panel.png" style="width: 6.4375in; height: 2.9166666666666665in;" /></p>
+<p>Our scopes have 2 input channels. Either of the inputs can be sent through a threshold to capture the signals collected on both channels in the vicinity of a trigger event.</p>
+<p><strong>Exercise 1-2</strong> - Let's use the oscilloscope to measure the voltage divider output. Connect an oscilloscope probe to <strong>Channel 1</strong> (orange port). Connect the probe tip to <span class="arithmatex">\(V_{out}\)</span> of your voltage divider, and the probe ground clamp to your circuit ground.</p>
+<p>Hit <strong>CONF</strong> on channel 1 and use the arrow and OK buttons to select the following options:</p>
+<ul>
+<li>
+<p>Probe: 10x (make sure that the 10x switch is set on the probe itself)</p>
+</li>
+<li>
+<p>Coupling: DC</p>
+</li>
+<li>
+<p>FFT: Off</p>
+</li>
+</ul>
+<p>Adjust channel 1's vertical settings to the following using its knobs:</p>
+<ul>
+<li>
+<p>DIV: 2 V (this means 2 V per vertical graticule)</p>
+</li>
+<li>
+<p>POS: 0V (this is the vertical offset voltage applied to the measured signal. On this oscilloscope the offset is also affected by changes of the DIV knob)</p>
+</li>
+</ul>
+<p>Adjust the horizontal settings to:</p>
+<ul>
+<li>
+<p>POS: 0 (you can press the ORIG button to get this setting)</p>
+</li>
+<li>
+<p>DIV: 500 μs (this means 500 μsec per horizontal graticule)</p>
+</li>
+</ul>
+<p>What is the voltage level shown on the screen? Does it match your multimeter measurement from Exercise 1-1?</p>
+<h2 id="floating-inputs">Floating Inputs</h2>
+<p>Before building more complex circuits, it is important to understand what happens to an electrical node that is not connected to a defined voltage—a state known as a <strong>floating</strong> input.</p>
+<p><strong>Exercise 1-3</strong></p>
+<p>Connect an oscilloscope probe to <strong>Channel 1</strong> of your oscilloscope. Leave the other end of the wire completely disconnected (floating in the air). Set the oscilloscope scale to a sensitive vertical range (e.g., <span class="arithmatex">\(50\,\text{mV/div}\)</span> or <span class="arithmatex">\(100\,\text{mV/div}\)</span>).</p>
+<ul>
+<li>What do you see? Why? What happens if you shake the wire around?</li>
+</ul>
+<p>Connect the ground of the oscilloscope (the tiny crocodile clamp) to the signal input on the same channel.</p>
+<ul>
+<li>What happens to the noise? Why? What happens when you move the probe?</li>
+</ul>
+<!-- ## Pull-down resistor
+
+Now we want to build a simple circuit to measure the state of a button. We will build this 
+circuit in two steps to see how a floating node behaves in a real circuit:
+
+**Exercise 1-4**
+
+1. Place a push button on your breadboard.
+
+    !!! warning "Warning"
+        The pins of the switch are shorted by pairs! Refer to the push button diagram on the [introduction page](index.md#switch-push-button) (or ask a TA) to make sure you do not accidentally bypass it.
+
+2. Connect one side to the $+5\,\text{V}$ supply.
+3. Connect the opposite side to your oscilloscope probe to measure $V_{\text{out}}$. Leave it completely disconnected from any resistor or ground.
+4. Set the scope to a sensitive vertical range (e.g., $100\,\text{mV/div}$ or $500\,\text{mV/div}$).
+
+<figure align="center" markdown="1">
+  <img src="../media/floating_switch_circuit.jpg" style="width: 4.5in;">
+  <figcaption markdown="1"><b>Floating switch circuit.</b> The output terminal $V_{\text{out}}$ is completely disconnected from any resistor or return path when the switch is open, making the input float.</figcaption>
+</figure>
+
+* **Question:** What is $V_{\text{out}}$ when you press the button? What happens to the voltage when you release the button? Does it quickly and cleanly return to $0\,\text{V}$?
+
+5. Now, connect a $10\,\text{k}\Omega$ resistor between your signal line ($V_{\text{out}}$) and the negative terminal of the battery (the bottom return line) as shown in the schematic below.
+
+<figure align="center" markdown="1">
+  <img src="../media/pulldown_circuit.jpg" style="width: 4.5in;">
+  <figcaption markdown="1"><b>Switch circuit with a pull-down resistor.</b> When the switch is open, the resistor pulls $V_{\text{out}}$ down to the negative terminal of the battery (0V). When the switch is closed, it connects the positive terminal (+5V) directly to $V_{\text{out}}$.</figcaption>
+</figure>
+
+* **Question:** What is the voltage at $V_{\text{out}}$ when the button is released now? 
+* **Question:** What is the voltage when the button is pressed?
+* **Question:** Measure and calculate the expected voltage at $V_{\text{out}}$ when the switch is closed. Use the voltage divider formula from Exercise 1-1 (treating the closed switch as a resistor $R_{\text{switch}} \approx 1\,\Omega$). 
+
+This experiment demonstrates why inputs (such as amplifier channels or microcontroller pins) must never be left floating. When no active source is driving a wire, we need a way to tie it to a default reference. We achieve this using a **pull-down resistor** (a resistor connecting the signal line to the negative terminal) or a **pull-up resistor** (connecting it to the positive terminal), which keeps the node at a stable state while allowing active signals to easily override it.
+
+--- -->
+
+<h2 id="generating-signals-with-the-oscilloscope">Generating signals with the oscilloscope</h2>
+<p>Now we want to use the function generator built into our oscilloscope to generate periodic signals.</p>
+<p><strong>Exercise 1-5</strong></p>
+<p>Connect a BNC cable between channel 1 (orange port) and the voltage generator (green port). Hit <strong>CONF</strong> on channel one and use the arrow and OK buttons to select the following options:</p>
+<ul>
+<li>
+<p>Probe: 1x (BNC cable)</p>
+</li>
+<li>
+<p>Coupling: DC</p>
+</li>
+<li>
+<p>FFT: Off</p>
+</li>
+</ul>
+<p>Next, we will generate a sinusoidal wave to simulate some interesting signal from the brain. Press the <strong>GEN</strong> button on the scope to pull up the function generator menu. You can then change the settings to output periodic voltage waveforms of different types, frequencies and duty cycles using the arrow and OK keys at the top of the scope:</p>
+<ul>
+<li>
+<p>Set the type to Sine</p>
+</li>
+<li>
+<p>Set the frequency to 1 kHz</p>
+</li>
+</ul>
+<p>To ensure the signal is actually being produced, connect a BNC cable between the output on the scope and one of the inputs on the scope. Adjust your channel one's vertical settings to the following using its knobs:</p>
+<ul>
+<li>
+<p>DIV: 500 mV (this means 500 mV per vertical graticule)</p>
+</li>
+<li>
+<p>POS: 0V (this is the vertical offset voltage applied to the measured signal)</p>
+</li>
+</ul>
+<p>Adjust the horizontal settings to:</p>
+<ul>
+<li>
+<p>POS: 0 (you can press the ORIG button to get this setting)</p>
+</li>
+<li>
+<p>DIV: 500 μs (this means 500 μsec per horizontal graticule)</p>
+</li>
+</ul>
+<p>Finally, we need to adjust our trigger to capture this waveform:</p>
+<ul>
+<li>
+<p>Mode: normal (only trigger when a threshold crossing occurs)</p>
+</li>
+<li>
+<p>Edge: rising</p>
+</li>
+<li>
+<p>Position: 0V</p>
+</li>
+</ul>
+<p>Make sure your scope is running by pressing the Run/Stop button. If all has gone well you should see something like this on your screen:</p>
+<p><img alt="" src="../media/oscilloscope_sine_wave.png" style="width: 4.921875546806649in; height: 3.69538823272091in; display: block; margin: 0 auto;" /></p>
+<h2 id="electrode-model">Electrode Model</h2>
+<p><strong>Exercise 1-6</strong> - What happens if you put an electrode in the brain and measure the output? In this exercise, we will build a simple circuit to mimic this scenario. First we need to plug in our 10x probes to get accurate measurements. Plug one into each input channel of the scope and then configure them using the CONF button:</p>
+<ul>
+<li>
+<p>Probe: 10x (make sure that the 10x switch is set on the probe itself)</p>
+</li>
+<li>
+<p>Coupling: DC</p>
+</li>
+<li>
+<p>FFT: Off</p>
+</li>
+</ul>
+<p>Now that we can make measurements and generate signals with our scope, we want to measure the output from a simple electrode model. We consider the following circuit as a simplified model of the electrode and the measurement system.</p>
+<p><img alt="" src="../media/electrode_model_schematic.png" style="width: 2.6770833333333335in; height: 1.823520341207349in;" /></p>
+<p><img alt="" src="../media/electrode_model_neuron.png" style="width: 2.6770833333333335in; height: 1.823520341207349in;" /></p>
+<p>We imagine that the function generator on the scope (voltage source in the image above) is a huge neuron. <span class="arithmatex">\(R_{s}\)</span> stands for the series resistance of the electrode. <span class="arithmatex">\(R_{sh}\)</span> is the shunt or parallel resistor and represents the effective resistance along all possible paths through which the current can flow to the ground through your recording system.</p>
+<p>First, add <span class="arithmatex">\(R_{s} = 10\text{ kOhm}\)</span> to the breadboard. Before completing the circuit, use two oscilloscope probes along with the second channel on the oscilloscope to measure the input voltage and <span class="arithmatex">\(V_{out}\)</span> after 'electrode series resistance' <span class="arithmatex">\(R_{s}\)</span>. How do the two voltage measurements compare?</p>
+<p>Next, complete your electrode model by adding <span class="arithmatex">\(R_{sh} = 220\text{ Ohm}\)</span> to the circuit. Using two oscilloscope probes, measure the voltage before and after the 'electrode' (<span class="arithmatex">\(V_{out}\)</span> and the function generator output). How much is the signal attenuated when measured?</p>
+<p>This attenuation is to a large degree unavoidable. We'll see later how this can be overcome.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+        <script src="../javascripts/interactive_plots.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,836 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../01_fundamentals/">
+      
+      
+        <link rel="next" href="../03_voltage_followers/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Part 2 - Passive Filters - TENSS 2025 - Extracellular Electrophysiology</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#part-2-passive-filters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TENSS 2025 - Extracellular Electrophysiology" class="md-header__button md-logo" aria-label="TENSS 2025 - Extracellular Electrophysiology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TENSS 2025 - Extracellular Electrophysiology
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Part 2 - Passive Filters
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TENSS 2025 - Extracellular Electrophysiology" class="md-nav__button md-logo" aria-label="TENSS 2025 - Extracellular Electrophysiology" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TENSS 2025 - Extracellular Electrophysiology
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Passive Filters
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - Passive Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capacitor-charge-and-discharge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacitor charge and discharge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-a-frequency-sweep-with-the-picoscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate a frequency sweep with the PicoScope
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_voltage_followers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - Voltage Followers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_active_filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - Active Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_differential_amplification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - Differential Amplification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_full_circuit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6 - Full Circuit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bill of Materials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print Full Handout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capacitor-charge-and-discharge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacitor charge and discharge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-a-frequency-sweep-with-the-picoscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate a frequency sweep with the PicoScope
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="part-2-passive-filters">Part 2 - Passive filters</h1>
+<div class="admonition warning">
+<p class="admonition-title">Data Persistence</p>
+<p>The interactive tables below store data in your browser's temporary memory. <strong>Refreshing the page or closing the tab will clear your entries.</strong> Please use the "Export CSV" or "Save Plot" buttons to save your work.</p>
+</div>
+<h2 id="capacitor-charge-and-discharge">Capacitor charge and discharge</h2>
+<p><strong>Exercise 2-1</strong> - Next, we want to understand how capacitors store charge and resist changes in voltage. On your breadboard, build the following circuit.</p>
+<p><img alt="" src="../media/capacitor_led_circuit.png" style="width: 3.869792213473316in; height: 2.1800404636920385in;" /></p>
+<p>Measure the voltage across the capacitor using the oscilloscope. What is it?</p>
+<p>With your probes attached to the circuit, disconnect the lead from +5V to the circuit.</p>
+<p><img alt="" src="../media/led_disconnect_breadboard.png" style="width: 4.46875in; height: 2.408546587926509in;" /></p>
+<p><img alt="" src="../media/led_symbol.png" style="width: 0.3697922134733158in; height: 0.3254166666666667in;" /></p>
+<p>LED</p>
+<ul>
+<li>
+<p>What happens to the LED?</p>
+</li>
+<li>
+<p>What happens to the voltage on the scope? Why? (Hint: there is a first and second-order answer to this question, a full explanation requires considering the LEDs I/V characteristics which you can look into if you want :)</p>
+</li>
+</ul>
+<p><strong>Capacitors and filters:</strong></p>
+<p>The simplest form of filtering in electronics is by using a resistor and
+a capacitor. To get an intuition of how this can be achieved, you can
+think of capacitors as elements whose "resistance" changes depending on
+the frequency of the input. DC current can not pass through capacitors
+(frequency=0), so it has an infinite resistance against DC current. AC
+current, however, passes through the capacitor. The higher the
+frequency, the lower the "resistance" of the capacitor. More precisely
+the current through a capacitor is proportional to the rate of voltage
+changes (<span class="arithmatex">\(I\  = \ C\ dV/dt\)</span>). Consider the 2 circuits below.</p>
+<p><img alt="" src="../media/highpass_lowpass_comparison.png" style="width: 2.8125in; height: 2.7340113735783027in;" /></p>
+<p><strong>Question:</strong> Which one do you think is a high pass filter (allows
+higher frequencies to pass to the output) and which one is a low pass
+filter? (consider 2 extreme cases of very high and zero input
+frequencies)</p>
+<p>Notice how easily combining resistors and capacitors in parallel or
+series makes a filter and modifies the frequency bandwidth of your
+circuit. This filtering is not always desirable. In practice, you
+sometimes filter signals unintentionally due to the resistive and
+capacitive properties of your recording system. For instance,
+voltage-clamp recordings are limited by the resistance and capacitance
+of your electrode. Although it is not always possible to avoid this
+problem, you should at least watch out for it.</p>
+<p><strong>Exercise 2-2:</strong> Assemble a <strong>highpass</strong> filter with the following
+values and use it to filter the function generator.</p>
+<div class="arithmatex">\[R_{1} = 1\text{ k}\Omega\]</div>
+<div class="arithmatex">\[C_{1} = 0.47\,\mu\text{F}\]</div>
+<p>Note: If you have an electrolytic capacitor, the negative pin is the shorter one.</p>
+<p>The frequency cutoff (defined as <span class="arithmatex">\(\sim 30\%\)</span> reduction in voltage amplitude)
+of the filter is <span class="arithmatex">\(\frac{1}{2\pi R_{1}C_{1}}\)</span>.</p>
+<p>To test the frequency response of this circuit connect your function
+generator to drive Vin and measure both this input signal and the output
+of the circuit using your scope inputs. From the "Gen" menu on the
+scope, adjust the output frequency of a sine wave, note the
+corresponding amplitudes of the input and output of your circuit, and
+fill out the following table:</p>
+<div class="interactive-container" style="display: flex; flex-direction: column; gap: 20px; background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0; margin: 20px 0;">
+  <table id="table-highpass" style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background: #3f51b5; color: white;">
+        <th style="padding: 10px; border: 1px solid #ddd;">Frequency</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Vin (V)</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Vout (V)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">1 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">5 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">10 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">50 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">100 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">500 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">1 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">5 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">10 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">50 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">100 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+    </tbody>
+  </table>
+  <div style="height: 400px; background: white; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    <canvas id="plot-highpass"></canvas>
+  </div>
+  <div style="display: flex; gap: 10px; justify-content: flex-end;">
+    <button onclick="exportCSV_table-highpass()" style="padding: 8px 16px; background: #4caf50; color: white; border: none; border-radius: 4px; cursor: pointer;">Export CSV</button>
+    <button onclick="downloadPlot_table-highpass()" style="padding: 8px 16px; background: #2196f3; color: white; border: none; border-radius: 4px; cursor: pointer;">Save Plot Image</button>
+  </div>
+</div>
+
+<ul>
+<li>What happens to the amplitude of the output as the input frequency
+  varies?</li>
+</ul>
+<p><strong>Exercise 2-3:</strong> Feed a 400 Hz sinusoidal signal to your circuit, and
+visualize the input and output of the high pass filter with 2
+oscilloscope probes. Do you notice any difference between input and
+output signals other than the amplitude?</p>
+<p>Filters, in addition to modulating the amplitude of signals, produce a
+lag, causing the phase of the output signal to be shifted from the
+input.</p>
+<p>Change the input frequency to 1000 Hz, does the phase lag change?</p>
+<p><strong>Exercise 2-4:</strong> Assemble a <strong>low pas</strong>s filter with the following
+values:</p>
+<div class="arithmatex">\[R_{2} = 220\text{ k}\Omega, C_{2} = 560\text{ pF}\]</div>
+<p>The frequency cutoff of the filter is <span class="arithmatex">\(\frac{1}{2\pi R_{1}C_{1}}\)</span></p>
+<p>Again, try changing the frequency of the input sine wave to test the
+filter to fill out the following table:</p>
+<div class="interactive-container" style="display: flex; flex-direction: column; gap: 20px; background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0; margin: 20px 0;">
+  <table id="table-lowpass" style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background: #3f51b5; color: white;">
+        <th style="padding: 10px; border: 1px solid #ddd;">Frequency</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Vin (V)</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Vout (V)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">1 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">5 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">10 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">50 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">100 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">500 Hz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">1 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">5 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">10 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">50 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+      <tr><td style="padding: 10px; border: 1px solid #ddd;">100 kHz</td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td><td contenteditable="true" style="padding: 10px; border: 1px solid #ddd; background: white;"></td></tr>
+    </tbody>
+  </table>
+  <div style="height: 400px; background: white; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+    <canvas id="plot-lowpass"></canvas>
+  </div>
+  <div style="display: flex; gap: 10px; justify-content: flex-end;">
+    <button onclick="exportCSV_table-lowpass()" style="padding: 8px 16px; background: #4caf50; color: white; border: none; border-radius: 4px; cursor: pointer;">Export CSV</button>
+    <button onclick="downloadPlot_table-lowpass()" style="padding: 8px 16px; background: #2196f3; color: white; border: none; border-radius: 4px; cursor: pointer;">Save Plot Image</button>
+  </div>
+</div>
+
+<p>What happens to the amplitude and phase of the output as the input
+frequency varies?</p>
+<h2 id="generate-a-frequency-sweep-with-the-picoscope">Generate a frequency sweep with the PicoScope</h2>
+<p>Connect the USB cable, start the software, and check that the software
+detects the hardware ("Picoscope 2204A). Select it and click on the
+"Gen" section on the top left and sweep, On, Up Down, and reasonable
+frequency.</p>
+<p><img alt="" src="../media/picoscope_awg_connection.png" style="width: 2.8586318897637795in; height: 4.828125546806649in;" /></p>
+<p><strong>Exercise 2-5:</strong> Connect the output of the PicoScope "AWG" to your
+oscilloscope and look at the raw signal as well as at the Fourier
+transform (FFT). What is the FFT doing? Connect the input to your filter
+circuit and look at the output. Does it all make sense?</p>
+<p><strong>Exercise 2-6:</strong> So far we have been recording sine waves. Square waves
+consist of a broad range of frequencies, with edges containing high
+frequencies. Produce a square wave with your Picoscope's function generator
+and then use the benchtop scope to measure the signal before and after the
+filter.</p>
+<ul>
+<li>
+<p>What do you observe?</p>
+</li>
+<li>
+<p>Turn on the FFT function on each of your scopes' inputs (CONF button).
+  What do you see? (Hint: if you don't see anything interesting, try
+  changing the bandwidth of your measurement using the horizontal
+  controls on your scope.)</p>
+</li>
+</ul>
+<p>You should be aware that, when your input signal contains a broad range
+of frequencies, filtering can affect each frequency component
+differently. The most obvious change is that each frequency's amplitude
+is changed (this is generally the purpose of filtering, after all).
+However, the relative phases of the signal can also change. This will
+manifest as distortions in the time domain (peaking and oscillations).
+There are many different types of filters that are designed to minimize
+the impact on certain aspects of the signal, but they always come with
+tradeoffs. Be careful when interpreting filtered signals, you need to
+understand exactly what effect they have across frequencies before
+comparing raw and filtered signals, or the results of different filter
+types. The phase response of a filter captures its effect on the phase
+of various frequency components. For the first order RC filter you have
+<span class="arithmatex">\(\text{phase shift}(f) = -\arctan(2\pi fRC)\)</span></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:4">
+<p>PicoScope could also be used for recording data, instead of the oscilloscope ... but they can be very fiddly (i.e. crash, bug, require to be restarted for things to work again) ... so do it at your own risk and keep the simpler oscilloscope at hand if you do.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+        <script src="../javascripts/interactive_plots.js"></script>
+      
+    
+  </body>
+</html>
